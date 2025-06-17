@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conexao.php';
+include '../conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuario"];
@@ -33,15 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
   <div class="login-container">
          <div class="login-left">
-        <img src="img/fundo-img.png" alt="Imagem de boas-vindas" class="fundo-img" />
+        <img src="../img/fundo-img.png" alt="Imagem de boas-vindas" class="fundo-img" />
         
         <div class="logo-clientfy">
-          <img src="img/logo.png" alt="Logo ClientFy" />
+          <img src="../img/logo.png" alt="Logo ClientFy" />
         </div>
       </div>
       <div class="login-right">
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <?php if (isset($erro)) echo "<p class='erro'>$erro</p>"; ?>
         </form>
         <footer>
-            Desenvolvido por Samuel Junqueira & Esau Paiva<br>
+            Desenvolvido por
             Client•Fy todos os direitos reservados © 
         </footer>
       </div>

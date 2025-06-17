@@ -1,12 +1,12 @@
 <?php
-include 'conexao.php';
+include('../conexao.php');
 session_start();
 
-// Impede acesso de usuários não logados ou que não sejam admin
-if (!isset($_SESSION["logado"]) || $_SESSION["logado"] !== true || $_SESSION["nivel"] !== 'admin') {
-    header("Location: login.php");
-    exit;
-}
+// if (!isset($_SESSION["logado"]) || $_SESSION["logado"] !== true || $_SESSION["nivel"] !== 'admin') {
+//     header("Location: login.php");
+//     exit;
+// }
+
 
 $mensagem = "";
 
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Cliente</title>
-    <link rel="stylesheet" href="css/cadastro.css?v=2">
+    <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 <body>
     <header>

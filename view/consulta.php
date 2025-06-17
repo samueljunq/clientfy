@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+include('../conexao.php');
 session_start();
 if (!isset($_SESSION["logado"]) || $_SESSION["logado"] !== true) {
     header("Location: login.php");
@@ -15,7 +15,7 @@ $resultado = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Consulta de Clientes</title>
-    <link rel="stylesheet" href="css/consulta.css?v=2">
+    <link rel="stylesheet" href="../css/consulta.css">
 </head>
 <body>
     <header>
